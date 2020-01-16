@@ -129,19 +129,19 @@ public class Game {
 		int modifier_x = 0;
 		int modifier_y = 0;
 		int token_count_diagonal_direction = 0;
-		if (direction == "down-left") {
+		if (direction.equals("down-left")) {
 			modifier_x = -1;
 			modifier_y = -1;
-		} else if (direction == "up-left") {
+		} else if (direction.equals("up-left")) {
 			modifier_x = -1;
 			modifier_y = 1;
-		} else if (direction == "down-right") {
+		} else if (direction.equals("down-right")) {
 			modifier_x = 1;
 			modifier_y = -1;
-		} else if (direction == "up-right") {
+		} else if (direction.equals("up-right")) {
 			modifier_x = 1;
 			modifier_y = 1;
-		}
+		}		
 		boolean move_on = true;
 		for (int i = 0; i < width; i++) {
 			if (column + modifier_x < width || row + modifier_y < height)
